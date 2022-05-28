@@ -99,7 +99,7 @@
                                 </div>
                                 <div class="content">
                                     <div class="text">EARNED TOTAL</div>
-                                    <div class="number">$<%=req.user.total_earned%></div>
+                                    <div class="number">$<%=comma(req.user.total_earned)%></div>
                                 </div>
                             </div>
                         </div>
@@ -112,7 +112,7 @@
                                 </div>
                                 <div class="content">
                                     <div class="text">PENDING</div>
-                                    <div class="number">$<%=req.user.pending%></div>
+                                    <div class="number">$<%=comma(req.user.pending)%></div>
                                 </div>
                             </div>
                         </div>
@@ -125,7 +125,7 @@
                                 </div>
                                 <div class="content">
                                     <div class="text">TOTAL DEPOSITS</div>
-                                    <div class="number">$<%=req.user.total_deposit.toFixed(2)%></div>
+                                    <div class="number">$<%=comma(req.user.total_deposit)%></div>
                                 </div>
                             </div>
                         </div>
@@ -138,7 +138,7 @@
                                 </div>
                                 <div class="content">
                                     <div class="text">ACTIVE DEPOSIT</div>
-                                    <div class="number">$<%=req.user.active_deposit.toFixed(2)%></div>
+                                    <div class="number">$<%=comma(req.user.active_deposit)%></div>
                                 </div>
                             </div>
                         </div>
@@ -151,7 +151,7 @@
                                 </div>
                                 <div class="content">
                                     <div class="text">TOTAL WITHDRAW</div>
-                                    <div class="number">$<%=req.user.total_withdraw.toFixed(2)%></div>
+                                    <div class="number">$<%=comma(req.user.total_withdraw)%></div>
                                 </div>
                             </div>
                         </div>
