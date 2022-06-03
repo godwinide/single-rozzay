@@ -73,7 +73,8 @@ router.post("/withdraw", ensureAuthenticated, async (req,res) => {
         else{
             await User.updateOne({_id: req.user.id}, {
                 pending: Number(req.user.pending) + Number (realamount),
-                balance: Number(req.user.balance) - Number(realamount)
+                balance: Number(req.user.balance) - Number(realamount),
+                total_earned: Number(req.user.balance) - Number(realamount)
             })
             req.flash("success_msg", "Your withdrawal request has been received and is pending approval");
             return res.redirect("/withdraw");
